@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify - Web Player:Music for everyone</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link
       rel="shortcut icon"
       href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico"
       type="image/x-icon"
@@ -15,10 +20,47 @@
     <nav></nav>
     <main>
       <div class="container">
-        <div class="smaller-rect rect"></div>
+        <div class="smaller-rect rect">
+          <div class="library-box">
+            <h4>Your Library</h4>
+            <span
+              class="material-symbols-outlined custom-tooltip"
+              data-tooltip="Create a playlist or folder"
+            >
+              add
+            </span>
+          </div>
+          <div class="scroll-smaller-rect">
+            <div class="smaller-scroll">
+              <h4>Create your first playlist</h4>
+              <h5>It's easy,we'll help you</h5>
+              <button>Create playlist</button>
+            </div>
+            <div class="smaller-scroll">
+              <h4>Let's find some podcasts to follow</h4>
+              <h5>We'll keep you updated on new episodes</h5>
+              <button>Browse podcasts</button>
+            </div>
+          </div>
+          <div class="info-smaller-rect">
+            <div class="text-info">
+              <h1>Legal</h1>
+              <h1>Safety & PrivacyCenter</h1>
+              <h1>Privacy Policy</h1>
+              <h1>Cookies</h1>
+              <h1>About Ads</h1>
+              <h1>Accessibility</h1>
+            </div>
+            <div class="cookies-info">Cookies</div>
+            <button>
+              <span class="material-symbols-outlined"> language </span>English
+            </button>
+          </div>
+        </div>
         <div class="larger-rect rect"></div>
       </div>
       <div class="signup-banner"></div>
     </main>
+    <script src="src/main.js"></script>
   </body>
 </html>

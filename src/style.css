@@ -1,4 +1,8 @@
 /* Reset default margins and paddings */
+@font-face {
+  font-family: spotifyfont;
+  src: url(../src/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,43 +11,202 @@
 
 body {
   font-family: sans-serif;
-  background-color: #fff;
-  color: #000;
+  background-color: #000;
+  color: #fff;
 }
 nav {
   height: 8vh;
   width: 100%;
-  background-color: #000;
 }
 main {
   height: 100%;
   overflow: hidden;
   width: 100%;
-
 }
 .container {
   height: 100%;
   width: 100%;
   display: flex;
-  padding: 2px 10px;
+  padding: 2.65px 8px;
   gap: 10px;
   position: relative;
 }
-.rect{
+.rect {
   border-radius: 5px;
   height: calc(100vh - 19vh);
 }
 .smaller-rect {
-  background-color: red;
   width: 28%;
+  position: relative;
 }
+.library-box {
+  background-color: #121212;
+  height: 17%;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 24px 30px;
+}
+.library-box h4 {
+  margin-top: 10px;
+}
+.library-box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  color: rgb(170, 170, 170);
+}
+
+.custom-tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 105%; /* above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  font-size: 13px;
+  z-index: 10;
+  font-family: spotifyfont;
+}
+
+.custom-tooltip:hover::after {
+  opacity: 1;
+}
+
+.library-box span:hover {
+  background-color: #ffffff22;
+  color: rgb(255, 255, 255);
+}
+.library-box.shadow {
+  /* box-shadow: 0 45px 20px #0F0F0F; */
+  box-shadow: 0 -5px 10px rgba(8, 8, 8, 0.648) inset;
+  transition: box-shadow 0.3s ease;
+}
+
+.scroll-smaller-rect {
+  background-color: #121212;
+  height: 45%;
+  width: 100%;
+  padding: 5%;
+
+  gap: 15px;
+  overflow-y: scroll;
+}
+/* Default scrollbar */
+.scroll-smaller-rect::-webkit-scrollbar {
+  width: 13px;
+}
+
+.scroll-smaller-rect::-webkit-scrollbar-thumb {
+  background-color: transparent;
+
+  transition: background-color 1s ease;
+}
+
+/* Hover class added by JS */
+.scroll-smaller-rect.hovered::-webkit-scrollbar-thumb {
+  background-color: #dbdbdbc8;
+}
+
+.smaller-scroll {
+  background-color: #1f1f1f;
+  height: 130px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-family: spotifyfont;
+  padding: 15px;
+  font-size: 16px;
+}
+.smaller-scroll h5 {
+  margin: 12px 1px;
+}
+.smaller-scroll button {
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-weight: bolder;
+  background-color: #ffffff;
+}
+.smaller-scroll button:hover {
+  transform: scale(1.09);
+  background-color: #f3f3f3;
+}
+.info-smaller-rect {
+  background-color: #121212;
+  height: calc(100% - (45% + 17%));
+  width: 100%;
+  padding: 20px;
+}
+.info-smaller-rect button {
+  font-family: spotifyfont;
+  font-weight: 500;
+  margin-top: 33px;
+  margin-left: 5px;
+  background-color: #000000;
+  color: white;
+  border: 1px solid white;
+  padding: 4px 18px;
+  font-size: 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.info-smaller-rect button:hover {
+  transform: scale(1.05);
+  border: 1.5px solid white;
+}
+.text-info {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 17px;
+}
+.info-smaller-rect h1 {
+  cursor: pointer;
+  font-size: 10px;
+  color: darkgrey;
+}
+.cookies-info {
+  font-size: 14px;
+  margin-top: 16px;
+}
+.cookies-info:hover {
+  text-decoration: underline 1.5px;
+}
+
 .larger-rect {
   background-color: rgb(6, 147, 255);
   /* height: calc(100vh - 9vh); */
   width: 72%;
 }
-.signup-banner{
+.signup-banner {
   width: 100%;
   height: 10.3vh;
-  background-color: green;
+  background: #af2997;
+  background: linear-gradient(
+    90deg,
+    rgba(175, 41, 151, 1) 0%,
+    rgba(123, 102, 201, 1) 50%,
+    rgba(81, 155, 245, 1) 100%
+  );
 }
