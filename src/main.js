@@ -43,8 +43,21 @@ myDiv.addEventListener("contextmenu", function (e) {
     blackBox.style.position = "absolute";
     blackBox.style.left = `${e.offsetX}px`;
     blackBox.style.top = `${e.offsetY + 15}px`;
-    blackBox.style.boxShadow = '1px 2px 10px #000';
-
+    blackBox.style.boxShadow = "1px 2px 10px #000";
+    blackBox.innerHTML = `
+    <div class="blackbox">
+      <span class="material-symbols-outlined">
+        playlist_add
+      </span>
+      <h4>Create playlist</h4>
+    </div>
+    <div class="blackbox">
+      <span class="material-symbols-outlined">
+        add
+      </span>
+      <h4>Create folder</h4>
+    </div>
+    `;
     myDiv.appendChild(blackBox);
     isBox = true;
   } else {
