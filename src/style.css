@@ -17,6 +17,45 @@ body {
 nav {
   height: 8vh;
   width: 100%;
+  /* background-color: #fff; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.input input{
+  width: 28vw;
+  height: 5vh;
+  border-radius: 20px;
+}
+.nav-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+.link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.mainlink::after {
+  content: "";
+  display: inline-block;
+  border-right: 2px solid white;
+  height: 25px;
+  margin-left: 30px;
+}
+
+.navlinks{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 16vw;
+  gap: 10px;
+  
 }
 main {
   height: 100%;
