@@ -10,6 +10,18 @@ scrollBox.addEventListener("scroll", () => {
     libraryBox.classList.remove("shadow");
   }
 });
+const inputBox =  document.querySelector(".input input");
+
+const shortcutEl = document.querySelector('.shortcut');
+
+inputBox.addEventListener('mouseenter', () => {
+  shortcutEl.classList.add('active');
+});
+
+inputBox.addEventListener('mouseleave', () => {
+  shortcutEl.classList.remove('active');
+});
+
 
 scrollBox.addEventListener("mouseover", () => {
   scrollBox.classList.add("hovered");
