@@ -23,7 +23,7 @@ nav {
   justify-content: space-between;
   padding: 20px;
 }
-.home .home{
+.home .home {
   font-size: 28px;
   background-color: #282828;
   border-radius: 50%;
@@ -45,8 +45,7 @@ nav {
   padding: 0px 50px;
   border: none;
 }
-.input input:hover{
-
+.input input:hover {
   border-radius: 21px;
 
   background-color: #383838;
@@ -59,7 +58,6 @@ input::placeholder {
   color: #c4c4c4;
   font-family: spotifyfont;
   font-size: 16px;
-
 }
 .input input:focus {
   outline: none;
@@ -73,33 +71,31 @@ input::placeholder {
   z-index: 99;
   color: #c4c4c4;
   cursor: pointer;
-  
 }
-.shortcut{
+.shortcut {
   opacity: 0;
   color: #c4c4c4;
   display: flex;
   gap: 7px;
   position: absolute;
-  top:25% ;
-  left:56% ;
+  top: 25%;
+  left: 56%;
 }
-.shortcut.active{
-  
+.shortcut.active {
   opacity: 1;
   color: #c4c4c4;
   display: flex;
   gap: 7px;
   position: absolute;
-  top:25% ;
-  left:56% ;
+  top: 25%;
+  left: 56%;
 
   transition: opacity 0.6s ease-in-out;
 }
-.shortcut h4{
+.shortcut h4 {
   border: 1px solid #c4c4c4;
   background-color: #2c2c2c;
-  
+
   padding: 6px;
   border-radius: 5px;
   font-size: 10px;
@@ -107,11 +103,14 @@ input::placeholder {
 .input .search {
   top: 25%;
   left: 3%;
-
 }
 .input .storage {
   top: 25%;
   right: 3%;
+}
+.input .storage:hover {
+  scale: 1.05;
+  color: white;
 }
 .input .storage::before {
   content: "";
@@ -353,11 +352,6 @@ main {
   text-decoration: underline 1.5px;
 }
 
-.larger-rect {
-  background-color: rgb(6, 147, 255);
-  /* height: calc(100vh - 9vh); */
-  width: 72%;
-}
 .signup-banner {
   width: 100%;
   height: 10.3vh;
@@ -402,4 +396,76 @@ main {
 }
 .signup-banner button:hover {
   transform: scale(1.1);
+}
+
+.larger-rect {
+  background-color: #212121;
+  /* height: calc(100vh - 9vh); */
+  width: 72%;
+  font-family: spotifyfont;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+
+  overflow-y: scroll;
+}
+
+.music-div {
+  height: auto;
+  width: 100%;
+  
+}
+.music-heading {
+  padding: 17px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.music-heading h1 {
+  font-size: 24px;
+  font-weight: 900;
+}
+.music-heading h4 {
+  color: #bbbbbb;
+  padding-top: 8px;
+  font-size: 14px;
+  letter-spacing: -0.5px;
+}
+.music-heading h4:hover {
+  text-decoration: underline 1.5px #e7e7e7;
+}
+.music-heading h1:hover {
+  text-decoration: underline 1.5px #ffffff;
+}
+
+.songs-list {
+  scroll-behavior: smooth;
+  display: flex;
+  gap: 20px;
+}
+.song {
+  height: 230px;
+
+  
+  
+  width: 180px;
+  /* background-color: red; */
+}
+.song img {
+  border-radius: 10px;
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.song h2{
+  font-size: 17px;
+  letter-spacing: 1.3px;
+}
+.song p{
+  font-size: 11px;
+  color: #9b9b9b;
 }
